@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/et_item"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:listitem="@layout/item_rv"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/et_item"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Item Name"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/et_item_price"
+        app:layout_constraintBottom_toTopOf="@id/item_url"/>
+    <EditText
+        android:id="@+id/et_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Item Price"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintStart_toEndOf="@id/et_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_submit"/>
+    <EditText
+        android:id="@+id/item_url"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_submit"
+        android:hint="paste the Url"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textColor="@color/white"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_url"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#9E0606"
+        />
+        
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
